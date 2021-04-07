@@ -1,3 +1,9 @@
+br/com/zup/KeymgrExcludeResponseOrBuilder.java
+ br.com.zup.KeymgrExcludeResponseOrBuilder
+br/com/zup/KeymgrExcludeRequest.java
+ br.com.zup.KeymgrExcludeRequest
+ br.com.zup.KeymgrExcludeRequest$1
+ br.com.zup.KeymgrExcludeRequest$Builder
 br/com/zup/KeymgrRegistryServiceGrpc.java
  br.com.zup.KeymgrRegistryServiceGrpc
  br.com.zup.KeymgrRegistryServiceGrpc$1
@@ -22,6 +28,12 @@ br/com/zup/KeymgrRegistryResponse.java
  br.com.zup.KeymgrRegistryResponse
  br.com.zup.KeymgrRegistryResponse$1
  br.com.zup.KeymgrRegistryResponse$Builder
+br/com/zup/KeymgrExcludeRequestOrBuilder.java
+ br.com.zup.KeymgrExcludeRequestOrBuilder
+br/com/zup/KeymgrExcludeResponse.java
+ br.com.zup.KeymgrExcludeResponse
+ br.com.zup.KeymgrExcludeResponse$1
+ br.com.zup.KeymgrExcludeResponse$Builder
 br/com/zup/KeymgrRegistryRequest.java
  br.com.zup.KeymgrRegistryRequest
  br.com.zup.KeymgrRegistryRequest$1

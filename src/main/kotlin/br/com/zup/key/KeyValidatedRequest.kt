@@ -2,6 +2,7 @@ package br.com.zup.key
 
 import br.com.zup.AccountType
 import br.com.zup.KeyType
+import br.com.zup.annotation.UniqueElement
 import io.micronaut.core.annotation.Introspected
 import java.util.*
 import javax.validation.constraints.NotBlank
@@ -11,6 +12,7 @@ import javax.validation.constraints.Size
 @Introspected
 data class KeyValidatedRequest(
     @field:Size(max = 77)
+    @field:UniqueElement(domain = "Key", fieldName = "pixKeyId")
     val pix: String,
 
     @field:NotNull

@@ -24,6 +24,16 @@ public final class Keymgr {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_br_com_zup_KeymgrRegistryResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_br_com_zup_KeymgrExcludeRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_br_com_zup_KeymgrExcludeRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_br_com_zup_KeymgrExcludeResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_br_com_zup_KeymgrExcludeResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,13 +48,18 @@ public final class Keymgr {
       "(\0162\023.br.com.zup.KeyType\022\020\n\010clientId\030\003 \001(" +
       "\t\022,\n\013accountType\030\004 \001(\0162\027.br.com.zup.Acco" +
       "untType\"\'\n\026KeymgrRegistryResponse\022\r\n\005pix" +
-      "Id\030\001 \001(\t*;\n\007KeyType\022\007\n\003KEY\020\000\022\007\n\003CPF\020\001\022\t\n" +
-      "\005PHONE\020\002\022\t\n\005EMAIL\020\003\022\010\n\004UUID\020\004*6\n\013Account" +
-      "Type\022\013\n\007ACCOUNT\020\000\022\014\n\010CORRENTE\020\001\022\014\n\010POUPA" +
-      "NCA\020\0022l\n\025KeymgrRegistryService\022S\n\010regist" +
-      "ry\022!.br.com.zup.KeymgrRegistryRequest\032\"." +
-      "br.com.zup.KeymgrRegistryResponse\"\000B\034\n\nb" +
-      "r.com.zupB\006KeymgrP\001\242\002\003HLWb\006proto3"
+      "Id\030\001 \001(\t\"7\n\024KeymgrExcludeRequest\022\r\n\005pixI" +
+      "d\030\001 \001(\t\022\020\n\010clientId\030\002 \001(\t\"8\n\025KeymgrExclu" +
+      "deResponse\022\r\n\005pixId\030\001 \001(\t\022\020\n\010clientId\030\002 " +
+      "\001(\t*;\n\007KeyType\022\007\n\003KEY\020\000\022\007\n\003CPF\020\001\022\t\n\005PHON" +
+      "E\020\002\022\t\n\005EMAIL\020\003\022\010\n\004UUID\020\004*6\n\013AccountType\022" +
+      "\013\n\007ACCOUNT\020\000\022\014\n\010CORRENTE\020\001\022\014\n\010POUPANCA\020\002" +
+      "2\276\001\n\025KeymgrRegistryService\022S\n\010registry\022!" +
+      ".br.com.zup.KeymgrRegistryRequest\032\".br.c" +
+      "om.zup.KeymgrRegistryResponse\"\000\022P\n\007exclu" +
+      "de\022 .br.com.zup.KeymgrExcludeRequest\032!.b" +
+      "r.com.zup.KeymgrExcludeResponse\"\000B\034\n\nbr." +
+      "com.zupB\006KeymgrP\001\242\002\003HLWb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62,6 +77,18 @@ public final class Keymgr {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_KeymgrRegistryResponse_descriptor,
         new java.lang.String[] { "PixId", });
+    internal_static_br_com_zup_KeymgrExcludeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_br_com_zup_KeymgrExcludeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_br_com_zup_KeymgrExcludeRequest_descriptor,
+        new java.lang.String[] { "PixId", "ClientId", });
+    internal_static_br_com_zup_KeymgrExcludeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_br_com_zup_KeymgrExcludeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_br_com_zup_KeymgrExcludeResponse_descriptor,
+        new java.lang.String[] { "PixId", "ClientId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -58,6 +58,37 @@ public final class KeymgrRegistryServiceGrpc {
     return getRegistryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<br.com.zup.KeymgrExcludeRequest,
+      br.com.zup.KeymgrExcludeResponse> getExcludeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "exclude",
+      requestType = br.com.zup.KeymgrExcludeRequest.class,
+      responseType = br.com.zup.KeymgrExcludeResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<br.com.zup.KeymgrExcludeRequest,
+      br.com.zup.KeymgrExcludeResponse> getExcludeMethod() {
+    io.grpc.MethodDescriptor<br.com.zup.KeymgrExcludeRequest, br.com.zup.KeymgrExcludeResponse> getExcludeMethod;
+    if ((getExcludeMethod = KeymgrRegistryServiceGrpc.getExcludeMethod) == null) {
+      synchronized (KeymgrRegistryServiceGrpc.class) {
+        if ((getExcludeMethod = KeymgrRegistryServiceGrpc.getExcludeMethod) == null) {
+          KeymgrRegistryServiceGrpc.getExcludeMethod = getExcludeMethod =
+              io.grpc.MethodDescriptor.<br.com.zup.KeymgrExcludeRequest, br.com.zup.KeymgrExcludeResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "exclude"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  br.com.zup.KeymgrExcludeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  br.com.zup.KeymgrExcludeResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new KeymgrRegistryServiceMethodDescriptorSupplier("exclude"))
+              .build();
+        }
+      }
+    }
+    return getExcludeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -113,6 +144,13 @@ public final class KeymgrRegistryServiceGrpc {
       asyncUnimplementedUnaryCall(getRegistryMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void exclude(br.com.zup.KeymgrExcludeRequest request,
+        io.grpc.stub.StreamObserver<br.com.zup.KeymgrExcludeResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getExcludeMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -122,6 +160,13 @@ public final class KeymgrRegistryServiceGrpc {
                 br.com.zup.KeymgrRegistryRequest,
                 br.com.zup.KeymgrRegistryResponse>(
                   this, METHODID_REGISTRY)))
+          .addMethod(
+            getExcludeMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                br.com.zup.KeymgrExcludeRequest,
+                br.com.zup.KeymgrExcludeResponse>(
+                  this, METHODID_EXCLUDE)))
           .build();
     }
   }
@@ -147,6 +192,14 @@ public final class KeymgrRegistryServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getRegistryMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void exclude(br.com.zup.KeymgrExcludeRequest request,
+        io.grpc.stub.StreamObserver<br.com.zup.KeymgrExcludeResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getExcludeMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -168,6 +221,13 @@ public final class KeymgrRegistryServiceGrpc {
     public br.com.zup.KeymgrRegistryResponse registry(br.com.zup.KeymgrRegistryRequest request) {
       return blockingUnaryCall(
           getChannel(), getRegistryMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public br.com.zup.KeymgrExcludeResponse exclude(br.com.zup.KeymgrExcludeRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getExcludeMethod(), getCallOptions(), request);
     }
   }
 
@@ -192,9 +252,18 @@ public final class KeymgrRegistryServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getRegistryMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<br.com.zup.KeymgrExcludeResponse> exclude(
+        br.com.zup.KeymgrExcludeRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getExcludeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTRY = 0;
+  private static final int METHODID_EXCLUDE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -216,6 +285,10 @@ public final class KeymgrRegistryServiceGrpc {
         case METHODID_REGISTRY:
           serviceImpl.registry((br.com.zup.KeymgrRegistryRequest) request,
               (io.grpc.stub.StreamObserver<br.com.zup.KeymgrRegistryResponse>) responseObserver);
+          break;
+        case METHODID_EXCLUDE:
+          serviceImpl.exclude((br.com.zup.KeymgrExcludeRequest) request,
+              (io.grpc.stub.StreamObserver<br.com.zup.KeymgrExcludeResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -279,6 +352,7 @@ public final class KeymgrRegistryServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeymgrRegistryServiceFileDescriptorSupplier())
               .addMethod(getRegistryMethod())
+              .addMethod(getExcludeMethod())
               .build();
         }
       }

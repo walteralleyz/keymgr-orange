@@ -15,14 +15,34 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="keymgr" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Enum" />
         <option value="Kotlin Interface" />
         <option value="Kotlin File" />
-        <option value="Kotlin Annotation" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Annotation" />
       </list>
     </option>
   </component>
@@ -49,27 +69,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.ApplicationKt">
-    <configuration name="KeyRegistryTest.should registry a new key" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.zup.key.KeyRegistryTest.should registry a new key&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="KeymgrEndpointTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -147,20 +146,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UniquePixKeyKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="keymgr.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="br.com.zup.annotation.UniquePixKeyKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Gradle.KeyRegistryTest.should registry a new key" />
       <item itemvalue="Gradle.KeymgrEndpointTest.should registry a new key" />
       <item itemvalue="Gradle.KeymgrEndpointTest" />
-      <item itemvalue="Application.ApplicationKt" />
       <item itemvalue="Gradle.Tests in 'br.com.zup'" />
+      <item itemvalue="Application.ApplicationKt" />
+      <item itemvalue="Application.UniquePixKeyKt" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ApplicationKt" />
+        <item itemvalue="Application.UniquePixKeyKt" />
         <item itemvalue="Gradle.Tests in 'br.com.zup'" />
         <item itemvalue="Gradle.KeymgrEndpointTest" />
         <item itemvalue="Gradle.KeymgrEndpointTest.should registry a new key" />
-        <item itemvalue="Gradle.KeyRegistryTest.should registry a new key" />
       </list>
     </recent_temporary>
   </component>

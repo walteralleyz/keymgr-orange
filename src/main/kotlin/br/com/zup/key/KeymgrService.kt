@@ -16,7 +16,7 @@ class KeymgrService(
 ) {
 
     fun create(@Valid req: KeyValidatedRequest): KeymgrRegistryResponse {
-        repository.findForPix(req.pix)?.let { throw KeyAlreadyExistsException("Chave pix já existe") }
+//        repository.findForPix(req.pix)?.let { throw KeyAlreadyExistsException("Chave pix já existe") }
 
         return try {
             client.getById(req.clientId)

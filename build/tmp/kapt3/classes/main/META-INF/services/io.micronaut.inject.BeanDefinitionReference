@@ -7,4 +7,5 @@ br.com.zup.key.$KeymgrEndpointDefinitionClass
 br.com.zup.exception.handler.$AccountNotFoundExceptionHandlerDefinitionClass
 br.com.zup.exception.handler.$KeyAlreadyExistsExceptionHandlerDefinitionClass
 br.com.zup.key.$$KeymgrEndpointDefinition$InterceptedDefinitionClass
+br.com.zup.annotation.$UniqueElementValidatorDefinitionClass
 br.com.zup.repository.$KeyRepository$InterceptedDefinitionClass

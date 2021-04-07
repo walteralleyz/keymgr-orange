@@ -9,6 +9,7 @@ package br.com.zup;
 
 service KeymgrRegistryService {
   rpc registry (KeymgrRegistryRequest) returns (KeymgrRegistryResponse) {}
+  rpc exclude (KeymgrExcludeRequest) returns (KeymgrExcludeResponse) {}
 }
 
 enum KeyType {
@@ -34,4 +35,14 @@ message KeymgrRegistryRequest {
 
 message KeymgrRegistryResponse {
   string pixId = 1;
+}
+
+message KeymgrExcludeRequest {
+  string pixId = 1;
+  string clientId = 2;
+}
+
+message KeymgrExcludeResponse {
+  string pixId = 1;
+  string clientId = 2;
 }
