@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.zup";
+option java_outer_classname = "Keymgr";
+option objc_class_prefix = "HLW";
+
+package br.com.zup;
+
+service KeymgrRegistryService {
+  rpc registry (KeymgrRegistryRequest) returns (KeymgrRegistryResponse) {}
+  rpc exclude (KeymgrExcludeRequest) returns (KeymgrExcludeResponse) {}
+}
+
+enum KeyType {
+  KEY = 0;
+  CPF = 1;
+  PHONE = 2;
+  EMAIL = 3;
+  UUID = 4;
+}
+
+enum AccountType {
+  ACCOUNT = 0;
+  CORRENTE = 1;
+  POUPANCA = 2;
+}
+
+message KeymgrRegistryRequest {
+  string pix = 1;
+  KeyType pixType = 2;
+  string clientId = 3;
+  AccountType accountType = 4;
+}
+
+message KeymgrRegistryResponse {
+  string pixId = 1;
+}
+
+message KeymgrExcludeRequest {
+  string pixId = 1;
+  string clientId = 2;
+}
+
+message KeymgrExcludeResponse {
+  string pixId = 1;
+  string clientId = 2;
+}

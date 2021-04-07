@@ -1,5 +1,6 @@
 package br.com.zup.annotation
 
+import br.com.zup.key.KeyAlreadyExistsException
 import io.micronaut.core.annotation.AnnotationValue
 import io.micronaut.transaction.SynchronousTransactionManager
 import io.micronaut.validation.validator.constraints.ConstraintValidator
@@ -36,13 +37,14 @@ class UniqueElementValidator(
     ): Boolean {
         val domain = annotationMetadata.stringValue("domain").get()
         val field = annotationMetadata.stringValue("fieldName").get()
+        val message = annotationMetadata.stringValue("message").get()
 
         return transactional.executeRead {
             try {
                 manager.createQuery("select k from $domain k where k.$field = :value")
                     .setParameter("value", value)
                     .singleResult
-                false
+                throw KeyAlreadyExistsException(message)
             } catch (e: NoResultException) { true }
         }
     }

@@ -6,7 +6,7 @@ import java.lang.System;
 @io.micronaut.core.annotation.Introspected()
 public final class KeyValidatedRequest {
     @org.jetbrains.annotations.NotNull()
-    @br.com.zup.annotation.UniqueElement(domain = "Key", fieldName = "pixKeyId")
+    @br.com.zup.annotation.UniqueElement(message = "Chave j\u00e1 foi registrada", domain = "Key", fieldName = "pixKeyId")
     @javax.validation.constraints.Size(max = 77)
     private final java.lang.String pix = null;
     @org.jetbrains.annotations.NotNull()

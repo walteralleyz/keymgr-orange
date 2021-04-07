@@ -12,7 +12,7 @@ import javax.validation.constraints.Size
 @Introspected
 data class KeyValidatedRequest(
     @field:Size(max = 77)
-    @field:UniqueElement(domain = "Key", fieldName = "pixKeyId")
+    @field:UniqueElement(message = "Chave já foi registrada", domain = "Key", fieldName = "pixKeyId")
     val pix: String,
 
     @field:NotNull

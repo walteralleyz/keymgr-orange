@@ -56,7 +56,7 @@ class KeymgrEndpointTest(
             )
         }.let {
             assertEquals(Status.ALREADY_EXISTS.code, it.status.code)
-            assertEquals("Already Exists", it.status.description)
+            assertEquals("Chave já foi registrada", it.status.description)
         }
     }
 
