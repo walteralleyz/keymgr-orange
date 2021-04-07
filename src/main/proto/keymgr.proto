@@ -9,6 +9,9 @@ package br.com.zup;
 
 service KeymgrRegistryService {
   rpc registry (KeymgrRegistryRequest) returns (KeymgrRegistryResponse) {}
+}
+
+service KeymgrRemoveService {
   rpc exclude (KeymgrExcludeRequest) returns (KeymgrExcludeResponse) {}
 }
 

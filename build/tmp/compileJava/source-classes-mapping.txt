@@ -4,6 +4,37 @@ br/com/zup/KeymgrExcludeRequest.java
  br.com.zup.KeymgrExcludeRequest
  br.com.zup.KeymgrExcludeRequest$1
  br.com.zup.KeymgrExcludeRequest$Builder
+br/com/zup/KeymgrRemoveServiceGrpc.java
+ br.com.zup.KeymgrRemoveServiceGrpc
+ br.com.zup.KeymgrRemoveServiceGrpc$1
+ br.com.zup.KeymgrRemoveServiceGrpc$2
+ br.com.zup.KeymgrRemoveServiceGrpc$3
+ br.com.zup.KeymgrRemoveServiceGrpc$KeymgrRemoveServiceBaseDescriptorSupplier
+ br.com.zup.KeymgrRemoveServiceGrpc$KeymgrRemoveServiceBlockingStub
+ br.com.zup.KeymgrRemoveServiceGrpc$KeymgrRemoveServiceFileDescriptorSupplier
+ br.com.zup.KeymgrRemoveServiceGrpc$KeymgrRemoveServiceFutureStub
+ br.com.zup.KeymgrRemoveServiceGrpc$KeymgrRemoveServiceImplBase
+ br.com.zup.KeymgrRemoveServiceGrpc$KeymgrRemoveServiceMethodDescriptorSupplier
+ br.com.zup.KeymgrRemoveServiceGrpc$KeymgrRemoveServiceStub
+ br.com.zup.KeymgrRemoveServiceGrpc$MethodHandlers
+br/com/zup/KeymgrRegistryResponseOrBuilder.java
+ br.com.zup.KeymgrRegistryResponseOrBuilder
+br/com/zup/AccountType.java
+ br.com.zup.AccountType
+ br.com.zup.AccountType$1
+br/com/zup/Keymgr.java
+ br.com.zup.Keymgr
+br/com/zup/KeymgrRegistryResponse.java
+ br.com.zup.KeymgrRegistryResponse
+ br.com.zup.KeymgrRegistryResponse$1
+ br.com.zup.KeymgrRegistryResponse$Builder
+br/com/zup/KeymgrExcludeResponse.java
+ br.com.zup.KeymgrExcludeResponse
+ br.com.zup.KeymgrExcludeResponse$1
+ br.com.zup.KeymgrExcludeResponse$Builder
+br/com/zup/KeyType.java
+ br.com.zup.KeyType
+ br.com.zup.KeyType$1
 br/com/zup/KeymgrRegistryServiceGrpc.java
  br.com.zup.KeymgrRegistryServiceGrpc
  br.com.zup.KeymgrRegistryServiceGrpc$1
@@ -17,29 +48,11 @@ br/com/zup/KeymgrRegistryServiceGrpc.java
  br.com.zup.KeymgrRegistryServiceGrpc$KeymgrRegistryServiceMethodDescriptorSupplier
  br.com.zup.KeymgrRegistryServiceGrpc$KeymgrRegistryServiceStub
  br.com.zup.KeymgrRegistryServiceGrpc$MethodHandlers
-br/com/zup/KeymgrRegistryResponseOrBuilder.java
- br.com.zup.KeymgrRegistryResponseOrBuilder
-br/com/zup/AccountType.java
- br.com.zup.AccountType
- br.com.zup.AccountType$1
-br/com/zup/Keymgr.java
- br.com.zup.Keymgr
-br/com/zup/KeymgrRegistryResponse.java
- br.com.zup.KeymgrRegistryResponse
- br.com.zup.KeymgrRegistryResponse$1
- br.com.zup.KeymgrRegistryResponse$Builder
 br/com/zup/KeymgrExcludeRequestOrBuilder.java
  br.com.zup.KeymgrExcludeRequestOrBuilder
-br/com/zup/KeymgrExcludeResponse.java
- br.com.zup.KeymgrExcludeResponse
- br.com.zup.KeymgrExcludeResponse$1
- br.com.zup.KeymgrExcludeResponse$Builder
 br/com/zup/KeymgrRegistryRequest.java
  br.com.zup.KeymgrRegistryRequest
  br.com.zup.KeymgrRegistryRequest$1
  br.com.zup.KeymgrRegistryRequest$Builder
 br/com/zup/KeymgrRegistryRequestOrBuilder.java
  br.com.zup.KeymgrRegistryRequestOrBuilder
-br/com/zup/KeyType.java
- br.com.zup.KeyType
- br.com.zup.KeyType$1

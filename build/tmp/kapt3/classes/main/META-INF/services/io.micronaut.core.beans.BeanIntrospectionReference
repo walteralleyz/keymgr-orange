@@ -1,2 +1,3 @@
-br.com.zup.key.$Key$IntrospectionRef
-br.com.zup.key.$KeyValidatedRequest$IntrospectionRef
+br.com.zup.pix.remove.$RemoveValidatedRequest$IntrospectionRef
+br.com.zup.pix.$Pix$IntrospectionRef
+br.com.zup.pix.registry.$RegistryValidatedRequest$IntrospectionRef

@@ -1,0 +1,6 @@
+br.com.zup.$ClientsDefinitionClass
+br.com.zup.$Clients$GrpcRegistry0DefinitionClass
+br.com.zup.$KeymgrTestDefinitionClass
+br.com.zup.pix.$RemoveEndpointTestDefinitionClass
+br.com.zup.pix.$RegistryEndpointTestDefinitionClass
+br.com.zup.$Clients$GrpcRemove1DefinitionClass

@@ -54,12 +54,13 @@ public final class Keymgr {
       "\001(\t*;\n\007KeyType\022\007\n\003KEY\020\000\022\007\n\003CPF\020\001\022\t\n\005PHON" +
       "E\020\002\022\t\n\005EMAIL\020\003\022\010\n\004UUID\020\004*6\n\013AccountType\022" +
       "\013\n\007ACCOUNT\020\000\022\014\n\010CORRENTE\020\001\022\014\n\010POUPANCA\020\002" +
-      "2\276\001\n\025KeymgrRegistryService\022S\n\010registry\022!" +
-      ".br.com.zup.KeymgrRegistryRequest\032\".br.c" +
-      "om.zup.KeymgrRegistryResponse\"\000\022P\n\007exclu" +
-      "de\022 .br.com.zup.KeymgrExcludeRequest\032!.b" +
-      "r.com.zup.KeymgrExcludeResponse\"\000B\034\n\nbr." +
-      "com.zupB\006KeymgrP\001\242\002\003HLWb\006proto3"
+      "2l\n\025KeymgrRegistryService\022S\n\010registry\022!." +
+      "br.com.zup.KeymgrRegistryRequest\032\".br.co" +
+      "m.zup.KeymgrRegistryResponse\"\0002g\n\023Keymgr" +
+      "RemoveService\022P\n\007exclude\022 .br.com.zup.Ke" +
+      "ymgrExcludeRequest\032!.br.com.zup.KeymgrEx" +
+      "cludeResponse\"\000B\034\n\nbr.com.zupB\006KeymgrP\001\242" +
+      "\002\003HLWb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

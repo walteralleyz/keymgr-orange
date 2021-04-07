@@ -39,10 +39,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Enum" />
-        <option value="Kotlin Interface" />
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Annotation" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -59,16 +59,22 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="br.com.zup.pix.remove" />
       <recent name="br.com.zup.exception.handler" />
       <recent name="br.com.zup.exception" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="br.com.zup.exception.internal" />
+      <recent name="br.com.zup.pix.registry" />
+      <recent name="br.com.zup.pix" />
       <recent name="br.com.zup.key" />
       <recent name="br.com.zup.account" />
-      <recent name="br.com.zup.service" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.zup.pix" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApplicationKt">
+  <component name="RunManager" selected="Gradle.Tests in 'br.com.zup'">
     <configuration name="KeymgrEndpointTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -168,8 +174,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApplicationKt" />
         <item itemvalue="Gradle.Tests in 'br.com.zup'" />
+        <item itemvalue="Application.ApplicationKt" />
         <item itemvalue="Application.UniquePixKeyKt" />
         <item itemvalue="Gradle.KeymgrEndpointTest" />
         <item itemvalue="Gradle.KeymgrEndpointTest.should registry a new key" />

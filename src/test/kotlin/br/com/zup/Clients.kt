@@ -9,9 +9,16 @@ import io.micronaut.grpc.server.GrpcServerChannel
 @Factory
 class Clients {
     @Bean
-    fun grpcClient(
+    fun grpcRegistry(
         @GrpcChannel(GrpcServerChannel.NAME) channel: ManagedChannel
     ): KeymgrRegistryServiceGrpc.KeymgrRegistryServiceBlockingStub {
         return KeymgrRegistryServiceGrpc.newBlockingStub(channel)
+    }
+
+    @Bean
+    fun grpcRemove(
+        @GrpcChannel(GrpcServerChannel.NAME) channel: ManagedChannel
+    ): KeymgrRemoveServiceGrpc.KeymgrRemoveServiceBlockingStub {
+        return KeymgrRemoveServiceGrpc.newBlockingStub(channel)
     }
 }
