@@ -1,10 +1,10 @@
 package br.com.zup.annotation
 
 import br.com.zup.key.KeyAlreadyExistsException
-import io.micronaut.core.annotation.AnnotationValue
+import br.com.zup.utils.valOf
+import io.micronaut.context.annotation.Factory
 import io.micronaut.transaction.SynchronousTransactionManager
 import io.micronaut.validation.validator.constraints.ConstraintValidator
-import io.micronaut.validation.validator.constraints.ConstraintValidatorContext
 import java.sql.Connection
 import javax.inject.Singleton
 import javax.persistence.EntityManager
@@ -24,28 +24,26 @@ annotation class UniqueElement(
     val fieldName: String
 )
 
-
-@Singleton
-class UniqueElementValidator(
+@Factory
+class Validation(
     private val manager: EntityManager,
     private val transactional: SynchronousTransactionManager<Connection>
-) : ConstraintValidator<UniqueElement, Any> {
-    override fun isValid(
-        value: Any?,
-        annotationMetadata: AnnotationValue<UniqueElement>,
-        context: ConstraintValidatorContext
-    ): Boolean {
-        val domain = annotationMetadata.stringValue("domain").get()
-        val field = annotationMetadata.stringValue("fieldName").get()
-        val message = annotationMetadata.stringValue("message").get()
+) {
 
-        return transactional.executeRead {
-            try {
-                manager.createQuery("select k from $domain k where k.$field = :value")
-                    .setParameter("value", value)
-                    .singleResult
-                throw KeyAlreadyExistsException(message)
-            } catch (e: NoResultException) { true }
+    @Singleton
+    fun unique(): ConstraintValidator<UniqueElement, Any> {
+        return ConstraintValidator { value, ann, _ ->
+            with(ann) {
+                transactional.executeRead {
+                    try {
+                        manager.createQuery(
+                            "from ${valOf("domain")} k where k.${valOf("fieldName")} = :value")
+                            .setParameter("value", value)
+                            .singleResult
+                        throw KeyAlreadyExistsException(valOf("message"))
+                    } catch (e: NoResultException) { true }
+                }
+            }
         }
     }
 }

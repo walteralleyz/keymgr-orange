@@ -1,11 +1,12 @@
-br.com.zup.exception.$ExceptionHandlerInterceptorDefinitionClass
 br.com.zup.exception.$ExceptionHandlerResolverDefinitionClass
+br.com.zup.exception.$ExceptionHandlerInterceptorDefinitionClass
 br.com.zup.key.$KeymgrServiceDefinitionClass
 br.com.zup.account.$AccountClient$InterceptedDefinitionClass
 br.com.zup.key.$$KeymgrServiceDefinition$InterceptedDefinitionClass
-br.com.zup.exception.handler.$KeyAlreadyExistsExceptionHandlerDefinitionClass
-br.com.zup.exception.handler.$AccountNotFoundExceptionHandlerDefinitionClass
 br.com.zup.key.$KeymgrEndpointDefinitionClass
-br.com.zup.annotation.$UniqueElementValidatorDefinitionClass
+br.com.zup.exception.handler.$AccountNotFoundExceptionHandlerDefinitionClass
+br.com.zup.exception.handler.$KeyAlreadyExistsExceptionHandlerDefinitionClass
+br.com.zup.annotation.$Validation$Unique0DefinitionClass
 br.com.zup.key.$$KeymgrEndpointDefinition$InterceptedDefinitionClass
+br.com.zup.annotation.$ValidationDefinitionClass
 br.com.zup.repository.$KeyRepository$InterceptedDefinitionClass
