@@ -13,13 +13,13 @@ public enum AccountType
    */
   ACCOUNT(0),
   /**
-   * <code>CORRENTE = 1;</code>
+   * <code>CACC = 1;</code>
    */
-  CORRENTE(1),
+  CACC(1),
   /**
-   * <code>POUPANCA = 2;</code>
+   * <code>SVGS = 2;</code>
    */
-  POUPANCA(2),
+  SVGS(2),
   UNRECOGNIZED(-1),
   ;
 
@@ -28,13 +28,13 @@ public enum AccountType
    */
   public static final int ACCOUNT_VALUE = 0;
   /**
-   * <code>CORRENTE = 1;</code>
+   * <code>CACC = 1;</code>
    */
-  public static final int CORRENTE_VALUE = 1;
+  public static final int CACC_VALUE = 1;
   /**
-   * <code>POUPANCA = 2;</code>
+   * <code>SVGS = 2;</code>
    */
-  public static final int POUPANCA_VALUE = 2;
+  public static final int SVGS_VALUE = 2;
 
 
   public final int getNumber() {
@@ -62,8 +62,8 @@ public enum AccountType
   public static AccountType forNumber(int value) {
     switch (value) {
       case 0: return ACCOUNT;
-      case 1: return CORRENTE;
-      case 2: return POUPANCA;
+      case 1: return CACC;
+      case 2: return SVGS;
       default: return null;
     }
   }

@@ -14,27 +14,35 @@ open class PixRepository(
     private val transactionManager: SynchronousTransactionManager<Connection>
 ) {
     fun save(pix: Pix): Pix {
-        return transactionManager.executeWrite {
-            entityManager.persist(pix)
-            pix
-        }
+        return transactionManager.executeWrite { entityManager.merge(pix) }
     }
 
-    fun findForPix(pixId: String): Pix? {
+    fun findForPix(pix: String): Pix? {
         return transactionManager.executeRead {
             try {
                 entityManager.createQuery(
-                    "from Pix where pixKeyId = :id",
+                    "from Pix p where p.pix = :id",
                     Pix::class.java
-                ).setParameter("id", pixId).singleResult
+                ).setParameter("id", pix).singleResult
             } catch (e: NoResultException) { null }
         }
     }
 
-    fun remove(pixId: String) {
+    fun findForPixId(id: Int): Pix? {
+        return transactionManager.executeRead {
+            try {
+                entityManager.createQuery(
+                    "from Pix p where p.id = :id",
+                    Pix::class.java
+                ).setParameter("id", id).singleResult
+            } catch (e: NoResultException) { null }
+        }
+    }
+
+    fun remove(pix: String) {
         transactionManager.executeWrite {
-            entityManager.createQuery("delete from Pix where pixKeyId = :pix")
-                .setParameter("pix", pixId)
+            entityManager.createQuery("delete from Pix p where p.pix = :pix")
+                .setParameter("pix", pix)
                 .executeUpdate()
         }
     }

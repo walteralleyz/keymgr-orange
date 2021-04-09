@@ -28,34 +28,34 @@ public final class KeymgrRemoveServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<br.com.zup.KeymgrExcludeRequest,
-      br.com.zup.KeymgrExcludeResponse> getExcludeMethod;
+      br.com.zup.KeymgrExcludeResponse> getRemoveMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "exclude",
+      fullMethodName = SERVICE_NAME + '/' + "remove",
       requestType = br.com.zup.KeymgrExcludeRequest.class,
       responseType = br.com.zup.KeymgrExcludeResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<br.com.zup.KeymgrExcludeRequest,
-      br.com.zup.KeymgrExcludeResponse> getExcludeMethod() {
-    io.grpc.MethodDescriptor<br.com.zup.KeymgrExcludeRequest, br.com.zup.KeymgrExcludeResponse> getExcludeMethod;
-    if ((getExcludeMethod = KeymgrRemoveServiceGrpc.getExcludeMethod) == null) {
+      br.com.zup.KeymgrExcludeResponse> getRemoveMethod() {
+    io.grpc.MethodDescriptor<br.com.zup.KeymgrExcludeRequest, br.com.zup.KeymgrExcludeResponse> getRemoveMethod;
+    if ((getRemoveMethod = KeymgrRemoveServiceGrpc.getRemoveMethod) == null) {
       synchronized (KeymgrRemoveServiceGrpc.class) {
-        if ((getExcludeMethod = KeymgrRemoveServiceGrpc.getExcludeMethod) == null) {
-          KeymgrRemoveServiceGrpc.getExcludeMethod = getExcludeMethod =
+        if ((getRemoveMethod = KeymgrRemoveServiceGrpc.getRemoveMethod) == null) {
+          KeymgrRemoveServiceGrpc.getRemoveMethod = getRemoveMethod =
               io.grpc.MethodDescriptor.<br.com.zup.KeymgrExcludeRequest, br.com.zup.KeymgrExcludeResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "exclude"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "remove"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   br.com.zup.KeymgrExcludeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   br.com.zup.KeymgrExcludeResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new KeymgrRemoveServiceMethodDescriptorSupplier("exclude"))
+              .setSchemaDescriptor(new KeymgrRemoveServiceMethodDescriptorSupplier("remove"))
               .build();
         }
       }
     }
-    return getExcludeMethod;
+    return getRemoveMethod;
   }
 
   /**
@@ -108,20 +108,20 @@ public final class KeymgrRemoveServiceGrpc {
 
     /**
      */
-    public void exclude(br.com.zup.KeymgrExcludeRequest request,
+    public void remove(br.com.zup.KeymgrExcludeRequest request,
         io.grpc.stub.StreamObserver<br.com.zup.KeymgrExcludeResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getExcludeMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getRemoveMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getExcludeMethod(),
+            getRemoveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 br.com.zup.KeymgrExcludeRequest,
                 br.com.zup.KeymgrExcludeResponse>(
-                  this, METHODID_EXCLUDE)))
+                  this, METHODID_REMOVE)))
           .build();
     }
   }
@@ -142,10 +142,10 @@ public final class KeymgrRemoveServiceGrpc {
 
     /**
      */
-    public void exclude(br.com.zup.KeymgrExcludeRequest request,
+    public void remove(br.com.zup.KeymgrExcludeRequest request,
         io.grpc.stub.StreamObserver<br.com.zup.KeymgrExcludeResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getExcludeMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRemoveMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -165,9 +165,9 @@ public final class KeymgrRemoveServiceGrpc {
 
     /**
      */
-    public br.com.zup.KeymgrExcludeResponse exclude(br.com.zup.KeymgrExcludeRequest request) {
+    public br.com.zup.KeymgrExcludeResponse remove(br.com.zup.KeymgrExcludeRequest request) {
       return blockingUnaryCall(
-          getChannel(), getExcludeMethod(), getCallOptions(), request);
+          getChannel(), getRemoveMethod(), getCallOptions(), request);
     }
   }
 
@@ -187,14 +187,14 @@ public final class KeymgrRemoveServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<br.com.zup.KeymgrExcludeResponse> exclude(
+    public com.google.common.util.concurrent.ListenableFuture<br.com.zup.KeymgrExcludeResponse> remove(
         br.com.zup.KeymgrExcludeRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getExcludeMethod(), getCallOptions()), request);
+          getChannel().newCall(getRemoveMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_EXCLUDE = 0;
+  private static final int METHODID_REMOVE = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -213,8 +213,8 @@ public final class KeymgrRemoveServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_EXCLUDE:
-          serviceImpl.exclude((br.com.zup.KeymgrExcludeRequest) request,
+        case METHODID_REMOVE:
+          serviceImpl.remove((br.com.zup.KeymgrExcludeRequest) request,
               (io.grpc.stub.StreamObserver<br.com.zup.KeymgrExcludeResponse>) responseObserver);
           break;
         default:
@@ -278,7 +278,7 @@ public final class KeymgrRemoveServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeymgrRemoveServiceFileDescriptorSupplier())
-              .addMethod(getExcludeMethod())
+              .addMethod(getRemoveMethod())
               .build();
         }
       }

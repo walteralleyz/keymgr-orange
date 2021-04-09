@@ -1,8 +1,9 @@
 package br.com.zup.account
 
 data class AccountResponse(
-    val id: String,
-    val nome: String,
-    val cpf: String,
-    val instituicao: AccountBank
+    val tipo: String,
+    val instituicao: AccountBank,
+    val agencia: String,
+    val numero: String,
+    val titular: Owner
 )

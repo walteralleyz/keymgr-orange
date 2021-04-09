@@ -8,16 +8,16 @@ public interface KeymgrExcludeResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string pixId = 1;</code>
-   * @return The pixId.
+   * <code>string pix = 1;</code>
+   * @return The pix.
    */
-  java.lang.String getPixId();
+  java.lang.String getPix();
   /**
-   * <code>string pixId = 1;</code>
-   * @return The bytes for pixId.
+   * <code>string pix = 1;</code>
+   * @return The bytes for pix.
    */
   com.google.protobuf.ByteString
-      getPixIdBytes();
+      getPixBytes();
 
   /**
    * <code>string clientId = 2;</code>

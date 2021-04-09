@@ -12,7 +12,15 @@ service KeymgrRegistryService {
 }
 
 service KeymgrRemoveService {
-  rpc exclude (KeymgrExcludeRequest) returns (KeymgrExcludeResponse) {}
+  rpc remove (KeymgrExcludeRequest) returns (KeymgrExcludeResponse) {}
+}
+
+service KeymgrInternReadService {
+  rpc read (KeymgrInternReadRequest) returns (KeymgrReadResponse) {}
+}
+
+service KeymgrExternReadService {
+  rpc read (KeymgrExternReadRequest) returns (KeymgrReadResponse) {}
 }
 
 enum KeyType {
@@ -25,8 +33,17 @@ enum KeyType {
 
 enum AccountType {
   ACCOUNT = 0;
-  CORRENTE = 1;
-  POUPANCA = 2;
+  CACC = 1;
+  SVGS = 2;
+}
+
+message AccountInfo {
+  string name = 1;
+  string cpf = 2;
+  string bankName = 3;
+  string branch = 4;
+  string accountNumber = 5;
+  AccountType accountType = 6;
 }
 
 message KeymgrRegistryRequest {
@@ -37,15 +54,33 @@ message KeymgrRegistryRequest {
 }
 
 message KeymgrRegistryResponse {
-  string pixId = 1;
+  int32 id = 1;
 }
 
 message KeymgrExcludeRequest {
-  string pixId = 1;
+  string pix = 1;
   string clientId = 2;
 }
 
 message KeymgrExcludeResponse {
-  string pixId = 1;
+  string pix = 1;
   string clientId = 2;
+}
+
+message KeymgrInternReadRequest {
+  int32 id = 1;
+  string clientId = 2;
+}
+
+message KeymgrExternReadRequest {
+  string pix = 1;
+}
+
+message KeymgrReadResponse {
+    int32 id = 1;
+    string clientId = 2;
+    KeyType pixType = 3;
+    string pix = 4;
+    string createdAt = 5;
+    AccountInfo accountInfo = 6;
 }

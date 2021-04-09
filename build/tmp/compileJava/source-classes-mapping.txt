@@ -1,5 +1,7 @@
 br/com/zup/KeymgrExcludeResponseOrBuilder.java
  br.com.zup.KeymgrExcludeResponseOrBuilder
+br/com/zup/KeymgrReadResponseOrBuilder.java
+ br.com.zup.KeymgrReadResponseOrBuilder
 br/com/zup/KeymgrExcludeRequest.java
  br.com.zup.KeymgrExcludeRequest
  br.com.zup.KeymgrExcludeRequest$1
@@ -28,13 +30,42 @@ br/com/zup/KeymgrRegistryResponse.java
  br.com.zup.KeymgrRegistryResponse
  br.com.zup.KeymgrRegistryResponse$1
  br.com.zup.KeymgrRegistryResponse$Builder
+br/com/zup/KeymgrExternReadRequest.java
+ br.com.zup.KeymgrExternReadRequest
+ br.com.zup.KeymgrExternReadRequest$1
+ br.com.zup.KeymgrExternReadRequest$Builder
+br/com/zup/KeymgrInternReadServiceGrpc.java
+ br.com.zup.KeymgrInternReadServiceGrpc
+ br.com.zup.KeymgrInternReadServiceGrpc$1
+ br.com.zup.KeymgrInternReadServiceGrpc$2
+ br.com.zup.KeymgrInternReadServiceGrpc$3
+ br.com.zup.KeymgrInternReadServiceGrpc$KeymgrInternReadServiceBaseDescriptorSupplier
+ br.com.zup.KeymgrInternReadServiceGrpc$KeymgrInternReadServiceBlockingStub
+ br.com.zup.KeymgrInternReadServiceGrpc$KeymgrInternReadServiceFileDescriptorSupplier
+ br.com.zup.KeymgrInternReadServiceGrpc$KeymgrInternReadServiceFutureStub
+ br.com.zup.KeymgrInternReadServiceGrpc$KeymgrInternReadServiceImplBase
+ br.com.zup.KeymgrInternReadServiceGrpc$KeymgrInternReadServiceMethodDescriptorSupplier
+ br.com.zup.KeymgrInternReadServiceGrpc$KeymgrInternReadServiceStub
+ br.com.zup.KeymgrInternReadServiceGrpc$MethodHandlers
 br/com/zup/KeymgrExcludeResponse.java
  br.com.zup.KeymgrExcludeResponse
  br.com.zup.KeymgrExcludeResponse$1
  br.com.zup.KeymgrExcludeResponse$Builder
+br/com/zup/KeymgrInternReadRequestOrBuilder.java
+ br.com.zup.KeymgrInternReadRequestOrBuilder
 br/com/zup/KeyType.java
  br.com.zup.KeyType
  br.com.zup.KeyType$1
+br/com/zup/KeymgrReadResponse.java
+ br.com.zup.KeymgrReadResponse
+ br.com.zup.KeymgrReadResponse$1
+ br.com.zup.KeymgrReadResponse$Builder
+br/com/zup/KeymgrInternReadRequest.java
+ br.com.zup.KeymgrInternReadRequest
+ br.com.zup.KeymgrInternReadRequest$1
+ br.com.zup.KeymgrInternReadRequest$Builder
+br/com/zup/AccountInfoOrBuilder.java
+ br.com.zup.AccountInfoOrBuilder
 br/com/zup/KeymgrRegistryServiceGrpc.java
  br.com.zup.KeymgrRegistryServiceGrpc
  br.com.zup.KeymgrRegistryServiceGrpc$1
@@ -48,6 +79,23 @@ br/com/zup/KeymgrRegistryServiceGrpc.java
  br.com.zup.KeymgrRegistryServiceGrpc$KeymgrRegistryServiceMethodDescriptorSupplier
  br.com.zup.KeymgrRegistryServiceGrpc$KeymgrRegistryServiceStub
  br.com.zup.KeymgrRegistryServiceGrpc$MethodHandlers
+br/com/zup/KeymgrExternReadServiceGrpc.java
+ br.com.zup.KeymgrExternReadServiceGrpc
+ br.com.zup.KeymgrExternReadServiceGrpc$1
+ br.com.zup.KeymgrExternReadServiceGrpc$2
+ br.com.zup.KeymgrExternReadServiceGrpc$3
+ br.com.zup.KeymgrExternReadServiceGrpc$KeymgrExternReadServiceBaseDescriptorSupplier
+ br.com.zup.KeymgrExternReadServiceGrpc$KeymgrExternReadServiceBlockingStub
+ br.com.zup.KeymgrExternReadServiceGrpc$KeymgrExternReadServiceFileDescriptorSupplier
+ br.com.zup.KeymgrExternReadServiceGrpc$KeymgrExternReadServiceFutureStub
+ br.com.zup.KeymgrExternReadServiceGrpc$KeymgrExternReadServiceImplBase
+ br.com.zup.KeymgrExternReadServiceGrpc$KeymgrExternReadServiceMethodDescriptorSupplier
+ br.com.zup.KeymgrExternReadServiceGrpc$KeymgrExternReadServiceStub
+ br.com.zup.KeymgrExternReadServiceGrpc$MethodHandlers
+br/com/zup/AccountInfo.java
+ br.com.zup.AccountInfo
+ br.com.zup.AccountInfo$1
+ br.com.zup.AccountInfo$Builder
 br/com/zup/KeymgrExcludeRequestOrBuilder.java
  br.com.zup.KeymgrExcludeRequestOrBuilder
 br/com/zup/KeymgrRegistryRequest.java
@@ -56,3 +104,5 @@ br/com/zup/KeymgrRegistryRequest.java
  br.com.zup.KeymgrRegistryRequest$Builder
 br/com/zup/KeymgrRegistryRequestOrBuilder.java
  br.com.zup.KeymgrRegistryRequestOrBuilder
+br/com/zup/KeymgrExternReadRequestOrBuilder.java
+ br.com.zup.KeymgrExternReadRequestOrBuilder

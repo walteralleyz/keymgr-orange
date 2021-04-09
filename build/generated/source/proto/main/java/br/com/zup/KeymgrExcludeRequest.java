@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private KeymgrExcludeRequest() {
-    pixId_ = "";
+    pix_ = "";
     clientId_ = "";
   }
 
@@ -53,7 +53,7 @@ private static final long serialVersionUID = 0L;
           case 10: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            pixId_ = s;
+            pix_ = s;
             break;
           }
           case 18: {
@@ -94,38 +94,38 @@ private static final long serialVersionUID = 0L;
             br.com.zup.KeymgrExcludeRequest.class, br.com.zup.KeymgrExcludeRequest.Builder.class);
   }
 
-  public static final int PIXID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object pixId_;
+  public static final int PIX_FIELD_NUMBER = 1;
+  private volatile java.lang.Object pix_;
   /**
-   * <code>string pixId = 1;</code>
-   * @return The pixId.
+   * <code>string pix = 1;</code>
+   * @return The pix.
    */
   @java.lang.Override
-  public java.lang.String getPixId() {
-    java.lang.Object ref = pixId_;
+  public java.lang.String getPix() {
+    java.lang.Object ref = pix_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      pixId_ = s;
+      pix_ = s;
       return s;
     }
   }
   /**
-   * <code>string pixId = 1;</code>
-   * @return The bytes for pixId.
+   * <code>string pix = 1;</code>
+   * @return The bytes for pix.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getPixIdBytes() {
-    java.lang.Object ref = pixId_;
+      getPixBytes() {
+    java.lang.Object ref = pix_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      pixId_ = b;
+      pix_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -184,8 +184,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getPixIdBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pixId_);
+    if (!getPixBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pix_);
     }
     if (!getClientIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientId_);
@@ -199,8 +199,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getPixIdBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pixId_);
+    if (!getPixBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pix_);
     }
     if (!getClientIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientId_);
@@ -220,8 +220,8 @@ private static final long serialVersionUID = 0L;
     }
     br.com.zup.KeymgrExcludeRequest other = (br.com.zup.KeymgrExcludeRequest) obj;
 
-    if (!getPixId()
-        .equals(other.getPixId())) return false;
+    if (!getPix()
+        .equals(other.getPix())) return false;
     if (!getClientId()
         .equals(other.getClientId())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -235,8 +235,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + PIXID_FIELD_NUMBER;
-    hash = (53 * hash) + getPixId().hashCode();
+    hash = (37 * hash) + PIX_FIELD_NUMBER;
+    hash = (53 * hash) + getPix().hashCode();
     hash = (37 * hash) + CLIENTID_FIELD_NUMBER;
     hash = (53 * hash) + getClientId().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -372,7 +372,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      pixId_ = "";
+      pix_ = "";
 
       clientId_ = "";
 
@@ -402,7 +402,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public br.com.zup.KeymgrExcludeRequest buildPartial() {
       br.com.zup.KeymgrExcludeRequest result = new br.com.zup.KeymgrExcludeRequest(this);
-      result.pixId_ = pixId_;
+      result.pix_ = pix_;
       result.clientId_ = clientId_;
       onBuilt();
       return result;
@@ -452,8 +452,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(br.com.zup.KeymgrExcludeRequest other) {
       if (other == br.com.zup.KeymgrExcludeRequest.getDefaultInstance()) return this;
-      if (!other.getPixId().isEmpty()) {
-        pixId_ = other.pixId_;
+      if (!other.getPix().isEmpty()) {
+        pix_ = other.pix_;
         onChanged();
       }
       if (!other.getClientId().isEmpty()) {
@@ -489,78 +489,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object pixId_ = "";
+    private java.lang.Object pix_ = "";
     /**
-     * <code>string pixId = 1;</code>
-     * @return The pixId.
+     * <code>string pix = 1;</code>
+     * @return The pix.
      */
-    public java.lang.String getPixId() {
-      java.lang.Object ref = pixId_;
+    public java.lang.String getPix() {
+      java.lang.Object ref = pix_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        pixId_ = s;
+        pix_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string pixId = 1;</code>
-     * @return The bytes for pixId.
+     * <code>string pix = 1;</code>
+     * @return The bytes for pix.
      */
     public com.google.protobuf.ByteString
-        getPixIdBytes() {
-      java.lang.Object ref = pixId_;
+        getPixBytes() {
+      java.lang.Object ref = pix_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        pixId_ = b;
+        pix_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string pixId = 1;</code>
-     * @param value The pixId to set.
+     * <code>string pix = 1;</code>
+     * @param value The pix to set.
      * @return This builder for chaining.
      */
-    public Builder setPixId(
+    public Builder setPix(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      pixId_ = value;
+      pix_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string pixId = 1;</code>
+     * <code>string pix = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearPixId() {
+    public Builder clearPix() {
       
-      pixId_ = getDefaultInstance().getPixId();
+      pix_ = getDefaultInstance().getPix();
       onChanged();
       return this;
     }
     /**
-     * <code>string pixId = 1;</code>
-     * @param value The bytes for pixId to set.
+     * <code>string pix = 1;</code>
+     * @param value The bytes for pix to set.
      * @return This builder for chaining.
      */
-    public Builder setPixIdBytes(
+    public Builder setPixBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      pixId_ = value;
+      pix_ = value;
       onChanged();
       return this;
     }

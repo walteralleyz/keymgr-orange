@@ -8,14 +8,8 @@ public interface KeymgrRegistryResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string pixId = 1;</code>
-   * @return The pixId.
+   * <code>int32 id = 1;</code>
+   * @return The id.
    */
-  java.lang.String getPixId();
-  /**
-   * <code>string pixId = 1;</code>
-   * @return The bytes for pixId.
-   */
-  com.google.protobuf.ByteString
-      getPixIdBytes();
+  int getId();
 }

@@ -40,8 +40,8 @@
       <list>
         <option value="Kotlin Enum" />
         <option value="Kotlin File" />
-        <option value="Kotlin Interface" />
         <option value="Kotlin Annotation" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -59,16 +59,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
-      <recent name="br.com.zup.pix.remove" />
-      <recent name="br.com.zup.exception.handler" />
-      <recent name="br.com.zup.exception" />
+      <recent name="br.com.zup.exception.internal" />
+      <recent name="br.com.zup.bcb.retrieve" />
+      <recent name="br.com.zup.pix.retrieve" />
+      <recent name="br.com.zup.account" />
+      <recent name="br.com.zup.bcb" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="br.com.zup.pix.endpoint" />
+      <recent name="br.com.zup.pix.retrieve.intern" />
+      <recent name="br.com.zup.bcb.registry" />
       <recent name="br.com.zup.exception.internal" />
       <recent name="br.com.zup.pix.registry" />
-      <recent name="br.com.zup.pix" />
-      <recent name="br.com.zup.key" />
-      <recent name="br.com.zup.account" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="br.com.zup.pix" />
@@ -122,7 +124,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.zup.*&quot;" />
+        <option name="scriptParameters" value="--tests &quot;br.com.zup.*&quot; --stacktrace" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -192,5 +194,9 @@
       <updated>1617627387161</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/keymgr$ApplicationKt.ic" NAME="ApplicationKt Coverage Results" MODIFIED="1617996614399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/keymgr$Tests_in__br_com_zup_.ic" NAME="Tests in 'br.com.zup' Coverage Results" MODIFIED="1617999217014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.com.zup.pix.endpoint.RemoveEndpointTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-04-09T20:13:53" hostname="ZUP-2698" time="0.301">
+  <properties/>
+  <testcase name="should delete a registered pix key()" classname="br.com.zup.pix.endpoint.RemoveEndpointTest" time="0.234"/>
+  <testcase name="should throw and error with key not in bcb()" classname="br.com.zup.pix.endpoint.RemoveEndpointTest" time="0.049"/>
+  <testcase name="should throw an error with wrong pix()" classname="br.com.zup.pix.endpoint.RemoveEndpointTest" time="0.013"/>
+  <system-out><![CDATA[?[36m17:13:53.692?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mi.m.context.env.DefaultEnvironment?[0;39m - Established active environments: [test]
+?[36m17:13:53.764?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-6 - Starting...
+?[36m17:13:53.772?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-6 - Start completed.
+?[36m17:13:53.795?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35morg.hibernate.dialect.Dialect?[0;39m - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[36m17:13:54.308?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-6 - Shutdown initiated...
+?[36m17:13:54.311?[0;39m ?[1;30m[Test worker]?[0;39m ?[34mINFO ?[0;39m ?[35mcom.zaxxer.hikari.HikariDataSource?[0;39m - HikariPool-6 - Shutdown completed.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

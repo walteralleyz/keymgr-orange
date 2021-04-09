@@ -21,4 +21,18 @@ class Clients {
     ): KeymgrRemoveServiceGrpc.KeymgrRemoveServiceBlockingStub {
         return KeymgrRemoveServiceGrpc.newBlockingStub(channel)
     }
+
+    @Bean
+    fun grpcRetrieve(
+        @GrpcChannel(GrpcServerChannel.NAME) channel: ManagedChannel
+    ): KeymgrInternReadServiceGrpc.KeymgrInternReadServiceBlockingStub {
+        return KeymgrInternReadServiceGrpc.newBlockingStub(channel)
+    }
+
+    @Bean
+    fun grpcExtern(
+        @GrpcChannel(GrpcServerChannel.NAME) channel: ManagedChannel
+    ): KeymgrExternReadServiceGrpc.KeymgrExternReadServiceBlockingStub {
+        return KeymgrExternReadServiceGrpc.newBlockingStub(channel)
+    }
 }

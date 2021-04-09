@@ -35,7 +35,7 @@ open class PixAndClientValidation(private val manager: EntityManager) : Constrai
         return with(annotationMetadata) {
             try {
                 manager.createQuery("from ${valOf("domain")} k where k.pixKeyId = :pix and k.clientId = :client")
-                    .setParameter("pix", value.pixId)
+                    .setParameter("pix", value.pix)
                     .setParameter("client", value.clientId)
                     .singleResult
                 true

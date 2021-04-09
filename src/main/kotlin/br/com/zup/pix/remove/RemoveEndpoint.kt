@@ -11,7 +11,7 @@ import javax.inject.Singleton
 @ErrorHandler
 @Singleton
 class RemoveEndpoint(private val service: RemoveService) : KeymgrRemoveServiceGrpc.KeymgrRemoveServiceImplBase() {
-    override fun exclude(request: KeymgrExcludeRequest, responseObserver: StreamObserver<KeymgrExcludeResponse>) {
+    override fun remove(request: KeymgrExcludeRequest, responseObserver: StreamObserver<KeymgrExcludeResponse>) {
         service.delete(request.toValidatedEntity()).let {
             responseObserver.onNext(it)
         }
