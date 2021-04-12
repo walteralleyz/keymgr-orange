@@ -21,7 +21,7 @@ fun validatePixKeyCPF(pixId: String?): String? {
 
 fun validatePixKeyEmail(pixId: String?): String? {
     if(pixId.isNullOrBlank()) return "Chave pix não preenchida"
-    if(!pixId.matches("^[a-z0-9.]+@[a-z0-9]+\\.[a-z]+\\.([a-z]+)?\$".toRegex())) return "Email deve ter formato válido"
+    if(!pixId.matches("^[A-Za-z0-9+_.-]+@(.+)\$".toRegex())) return "Email deve ter formato válido"
 
     return null
 }

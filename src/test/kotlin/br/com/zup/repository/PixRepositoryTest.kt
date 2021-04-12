@@ -31,7 +31,7 @@ class PixRepositoryTest(
             )
         ))
 
-        repo.findForPix("12345679811")?.let {
+        repo.findByPix("12345679811")?.let {
             assertNotNull(it)
             assertEquals("asdfqwerqwer", it.clientId)
             assertNotNull(it.accountInfo)
@@ -42,6 +42,6 @@ class PixRepositoryTest(
     fun `should delete a existing key`() {
         repo.remove("12345679811")
 
-        assertNull(repo.findForPix("12345679811"))
+        assertNull(repo.findByPix("12345679811"))
     }
 }

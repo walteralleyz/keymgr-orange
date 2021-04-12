@@ -3,6 +3,7 @@ package br.com.zup.utils
 import br.com.zup.*
 import br.com.zup.bcb.BCBClient
 import br.com.zup.exception.internal.makeException
+import br.com.zup.pix.list.ListValidatedRequest
 import br.com.zup.pix.retrieve.extern.RetrieveValidatedRequest as RetrieveExternal
 import br.com.zup.pix.registry.RegistryValidatedRequest
 import br.com.zup.pix.remove.RemoveValidatedRequest
@@ -28,6 +29,8 @@ fun KeymgrInternReadRequest.toValidatedEntity(): RetrieveValidatedRequest = Retr
 )
 
 fun KeymgrExternReadRequest.toValidatedEntity(): RetrieveExternal = RetrieveExternal(this.pix)
+
+fun KeymgrReadAllRequest.toValidatedEntity(): ListValidatedRequest = ListValidatedRequest(this.clientId)
 
 fun AnnotationValue<*>.valOf(value: String) = this.stringValue(value).get()
 

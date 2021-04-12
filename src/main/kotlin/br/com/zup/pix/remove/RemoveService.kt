@@ -4,7 +4,6 @@ import br.com.zup.KeymgrExcludeResponse
 import br.com.zup.bcb.BCBClient
 import br.com.zup.bcb.remove.convertToBCBRemoveRequest
 import br.com.zup.exception.internal.NotFoundException
-import br.com.zup.exception.internal.RequestException
 import br.com.zup.exception.internal.makeException
 import br.com.zup.repository.PixRepository
 import io.micronaut.validation.Validated
@@ -19,7 +18,7 @@ class RemoveService(
 ) {
 
     fun delete(@Valid req: RemoveValidatedRequest): KeymgrExcludeResponse {
-        val pix = repo.findForPix(req.pix) ?: throw NotFoundException("Pix não registrada no sistema")
+        val pix = repo.findByPix(req.pix) ?: throw NotFoundException("Pix não registrada no sistema")
 
         bcbClient.remove(pix.pix, convertToBCBRemoveRequest(pix))?.let {
             it.body.orElseThrow { makeException("request") }

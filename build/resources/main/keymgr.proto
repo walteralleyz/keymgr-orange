@@ -23,6 +23,10 @@ service KeymgrExternReadService {
   rpc read (KeymgrExternReadRequest) returns (KeymgrReadResponse) {}
 }
 
+service KeymgrReadAllService {
+  rpc readAll (KeymgrReadAllRequest) returns (KeymgrReadAllResponse) {}
+}
+
 enum KeyType {
   KEY = 0;
   CPF = 1;
@@ -44,6 +48,15 @@ message AccountInfo {
   string branch = 4;
   string accountNumber = 5;
   AccountType accountType = 6;
+}
+
+message ReadAllResponse {
+  int32 id = 1;
+  string clientId = 2;
+  KeyType keyType = 3;
+  string pix = 4;
+  AccountType accountType = 5;
+  string createdAt = 6;
 }
 
 message KeymgrRegistryRequest {
@@ -83,4 +96,12 @@ message KeymgrReadResponse {
     string pix = 4;
     string createdAt = 5;
     AccountInfo accountInfo = 6;
+}
+
+message KeymgrReadAllRequest {
+  string clientId = 1;
+}
+
+message KeymgrReadAllResponse {
+  repeated ReadAllResponse response = 1;
 }

@@ -41,7 +41,7 @@ class RetrieveEndpointTest(
         )
 
         grpcRetrieve.read(KeymgrInternReadRequest.newBuilder()
-            .setId(repo.findForPix("54555658451")!!.id!!)
+            .setId(repo.findByPix("54555658451")!!.id!!)
             .setClientId("c56dfef4-7901-44fb-84e2-a2cefb157890")
             .build()
         ).let {

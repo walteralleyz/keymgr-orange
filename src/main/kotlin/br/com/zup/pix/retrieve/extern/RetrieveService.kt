@@ -17,7 +17,7 @@ class RetrieveService(
 ) {
 
     fun retrieve(@Valid req: RetrieveValidatedRequest): KeymgrReadResponse {
-        val pix = repo.findForPix(req.pix) ?: throw NotFoundException("Chave nao encontrada")
+        val pix = repo.findByPix(req.pix) ?: throw NotFoundException("Chave nao encontrada")
 
         bcbClient.retrieve(pix.pix)?.let { it.body.orElseThrow { makeException("found") } }
 

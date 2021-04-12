@@ -59,11 +59,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="br.com.zup.pix.list" />
       <recent name="br.com.zup.exception.internal" />
       <recent name="br.com.zup.bcb.retrieve" />
       <recent name="br.com.zup.pix.retrieve" />
       <recent name="br.com.zup.account" />
-      <recent name="br.com.zup.bcb" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="br.com.zup.pix.endpoint" />
@@ -76,7 +76,7 @@
       <recent name="br.com.zup.pix" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'br.com.zup'">
+  <component name="RunManager" selected="Application.ApplicationKt">
     <configuration name="KeymgrEndpointTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -176,8 +176,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'br.com.zup'" />
         <item itemvalue="Application.ApplicationKt" />
+        <item itemvalue="Gradle.Tests in 'br.com.zup'" />
         <item itemvalue="Application.UniquePixKeyKt" />
         <item itemvalue="Gradle.KeymgrEndpointTest" />
         <item itemvalue="Gradle.KeymgrEndpointTest.should registry a new key" />

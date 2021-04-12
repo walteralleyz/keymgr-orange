@@ -20,6 +20,11 @@ public final class Keymgr {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_br_com_zup_AccountInfo_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_br_com_zup_ReadAllResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_br_com_zup_ReadAllResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_br_com_zup_KeymgrRegistryRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -54,6 +59,16 @@ public final class Keymgr {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_br_com_zup_KeymgrReadResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_br_com_zup_KeymgrReadAllRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_br_com_zup_KeymgrReadAllRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_br_com_zup_KeymgrReadAllResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_br_com_zup_KeymgrReadAllResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -67,21 +82,28 @@ public final class Keymgr {
       "fo\022\014\n\004name\030\001 \001(\t\022\013\n\003cpf\030\002 \001(\t\022\020\n\010bankNam" +
       "e\030\003 \001(\t\022\016\n\006branch\030\004 \001(\t\022\025\n\raccountNumber" +
       "\030\005 \001(\t\022,\n\013accountType\030\006 \001(\0162\027.br.com.zup" +
-      ".AccountType\"\212\001\n\025KeymgrRegistryRequest\022\013" +
-      "\n\003pix\030\001 \001(\t\022$\n\007pixType\030\002 \001(\0162\023.br.com.zu" +
-      "p.KeyType\022\020\n\010clientId\030\003 \001(\t\022,\n\013accountTy" +
-      "pe\030\004 \001(\0162\027.br.com.zup.AccountType\"$\n\026Key" +
-      "mgrRegistryResponse\022\n\n\002id\030\001 \001(\005\"5\n\024Keymg" +
-      "rExcludeRequest\022\013\n\003pix\030\001 \001(\t\022\020\n\010clientId" +
-      "\030\002 \001(\t\"6\n\025KeymgrExcludeResponse\022\013\n\003pix\030\001" +
-      " \001(\t\022\020\n\010clientId\030\002 \001(\t\"7\n\027KeymgrInternRe" +
-      "adRequest\022\n\n\002id\030\001 \001(\005\022\020\n\010clientId\030\002 \001(\t\"" +
-      "&\n\027KeymgrExternReadRequest\022\013\n\003pix\030\001 \001(\t\"" +
-      "\246\001\n\022KeymgrReadResponse\022\n\n\002id\030\001 \001(\005\022\020\n\010cl" +
-      "ientId\030\002 \001(\t\022$\n\007pixType\030\003 \001(\0162\023.br.com.z" +
-      "up.KeyType\022\013\n\003pix\030\004 \001(\t\022\021\n\tcreatedAt\030\005 \001" +
-      "(\t\022,\n\013accountInfo\030\006 \001(\0132\027.br.com.zup.Acc" +
-      "ountInfo*;\n\007KeyType\022\007\n\003KEY\020\000\022\007\n\003CPF\020\001\022\t\n" +
+      ".AccountType\"\243\001\n\017ReadAllResponse\022\n\n\002id\030\001" +
+      " \001(\005\022\020\n\010clientId\030\002 \001(\t\022$\n\007keyType\030\003 \001(\0162" +
+      "\023.br.com.zup.KeyType\022\013\n\003pix\030\004 \001(\t\022,\n\013acc" +
+      "ountType\030\005 \001(\0162\027.br.com.zup.AccountType\022" +
+      "\021\n\tcreatedAt\030\006 \001(\t\"\212\001\n\025KeymgrRegistryReq" +
+      "uest\022\013\n\003pix\030\001 \001(\t\022$\n\007pixType\030\002 \001(\0162\023.br." +
+      "com.zup.KeyType\022\020\n\010clientId\030\003 \001(\t\022,\n\013acc" +
+      "ountType\030\004 \001(\0162\027.br.com.zup.AccountType\"" +
+      "$\n\026KeymgrRegistryResponse\022\n\n\002id\030\001 \001(\005\"5\n" +
+      "\024KeymgrExcludeRequest\022\013\n\003pix\030\001 \001(\t\022\020\n\010cl" +
+      "ientId\030\002 \001(\t\"6\n\025KeymgrExcludeResponse\022\013\n" +
+      "\003pix\030\001 \001(\t\022\020\n\010clientId\030\002 \001(\t\"7\n\027KeymgrIn" +
+      "ternReadRequest\022\n\n\002id\030\001 \001(\005\022\020\n\010clientId\030" +
+      "\002 \001(\t\"&\n\027KeymgrExternReadRequest\022\013\n\003pix\030" +
+      "\001 \001(\t\"\246\001\n\022KeymgrReadResponse\022\n\n\002id\030\001 \001(\005" +
+      "\022\020\n\010clientId\030\002 \001(\t\022$\n\007pixType\030\003 \001(\0162\023.br" +
+      ".com.zup.KeyType\022\013\n\003pix\030\004 \001(\t\022\021\n\tcreated" +
+      "At\030\005 \001(\t\022,\n\013accountInfo\030\006 \001(\0132\027.br.com.z" +
+      "up.AccountInfo\"(\n\024KeymgrReadAllRequest\022\020" +
+      "\n\010clientId\030\001 \001(\t\"F\n\025KeymgrReadAllRespons" +
+      "e\022-\n\010response\030\001 \003(\0132\033.br.com.zup.ReadAll" +
+      "Response*;\n\007KeyType\022\007\n\003KEY\020\000\022\007\n\003CPF\020\001\022\t\n" +
       "\005PHONE\020\002\022\t\n\005EMAIL\020\003\022\010\n\004UUID\020\004*.\n\013Account" +
       "Type\022\013\n\007ACCOUNT\020\000\022\010\n\004CACC\020\001\022\010\n\004SVGS\020\0022l\n" +
       "\025KeymgrRegistryService\022S\n\010registry\022!.br." +
@@ -94,8 +116,11 @@ public final class Keymgr {
       "est\032\036.br.com.zup.KeymgrReadResponse\"\0002h\n" +
       "\027KeymgrExternReadService\022M\n\004read\022#.br.co" +
       "m.zup.KeymgrExternReadRequest\032\036.br.com.z" +
-      "up.KeymgrReadResponse\"\000B\034\n\nbr.com.zupB\006K" +
-      "eymgrP\001\242\002\003HLWb\006proto3"
+      "up.KeymgrReadResponse\"\0002h\n\024KeymgrReadAll" +
+      "Service\022P\n\007readAll\022 .br.com.zup.KeymgrRe" +
+      "adAllRequest\032!.br.com.zup.KeymgrReadAllR" +
+      "esponse\"\000B\034\n\nbr.com.zupB\006KeymgrP\001\242\002\003HLWb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -107,48 +132,66 @@ public final class Keymgr {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_AccountInfo_descriptor,
         new java.lang.String[] { "Name", "Cpf", "BankName", "Branch", "AccountNumber", "AccountType", });
-    internal_static_br_com_zup_KeymgrRegistryRequest_descriptor =
+    internal_static_br_com_zup_ReadAllResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_br_com_zup_ReadAllResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_br_com_zup_ReadAllResponse_descriptor,
+        new java.lang.String[] { "Id", "ClientId", "KeyType", "Pix", "AccountType", "CreatedAt", });
+    internal_static_br_com_zup_KeymgrRegistryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_br_com_zup_KeymgrRegistryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_KeymgrRegistryRequest_descriptor,
         new java.lang.String[] { "Pix", "PixType", "ClientId", "AccountType", });
     internal_static_br_com_zup_KeymgrRegistryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_br_com_zup_KeymgrRegistryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_KeymgrRegistryResponse_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_br_com_zup_KeymgrExcludeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_br_com_zup_KeymgrExcludeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_KeymgrExcludeRequest_descriptor,
         new java.lang.String[] { "Pix", "ClientId", });
     internal_static_br_com_zup_KeymgrExcludeResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_br_com_zup_KeymgrExcludeResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_KeymgrExcludeResponse_descriptor,
         new java.lang.String[] { "Pix", "ClientId", });
     internal_static_br_com_zup_KeymgrInternReadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_br_com_zup_KeymgrInternReadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_KeymgrInternReadRequest_descriptor,
         new java.lang.String[] { "Id", "ClientId", });
     internal_static_br_com_zup_KeymgrExternReadRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_br_com_zup_KeymgrExternReadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_KeymgrExternReadRequest_descriptor,
         new java.lang.String[] { "Pix", });
     internal_static_br_com_zup_KeymgrReadResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_br_com_zup_KeymgrReadResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_br_com_zup_KeymgrReadResponse_descriptor,
         new java.lang.String[] { "Id", "ClientId", "PixType", "Pix", "CreatedAt", "AccountInfo", });
+    internal_static_br_com_zup_KeymgrReadAllRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_br_com_zup_KeymgrReadAllRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_br_com_zup_KeymgrReadAllRequest_descriptor,
+        new java.lang.String[] { "ClientId", });
+    internal_static_br_com_zup_KeymgrReadAllResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_br_com_zup_KeymgrReadAllResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_br_com_zup_KeymgrReadAllResponse_descriptor,
+        new java.lang.String[] { "Response", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -17,7 +17,7 @@ open class PixRepository(
         return transactionManager.executeWrite { entityManager.merge(pix) }
     }
 
-    fun findForPix(pix: String): Pix? {
+    fun findByPix(pix: String): Pix? {
         return transactionManager.executeRead {
             try {
                 entityManager.createQuery(
@@ -28,7 +28,7 @@ open class PixRepository(
         }
     }
 
-    fun findForPixId(id: Int): Pix? {
+    fun findByPixId(id: Int): Pix? {
         return transactionManager.executeRead {
             try {
                 entityManager.createQuery(
@@ -36,6 +36,15 @@ open class PixRepository(
                     Pix::class.java
                 ).setParameter("id", id).singleResult
             } catch (e: NoResultException) { null }
+        }
+    }
+
+    fun findByClientId(id: String): List<Pix> {
+        return transactionManager.executeRead {
+            entityManager.createQuery(
+                "from Pix p where p.clientId = :id",
+                Pix::class.java
+            ).setParameter("id", id).resultList
         }
     }
 
