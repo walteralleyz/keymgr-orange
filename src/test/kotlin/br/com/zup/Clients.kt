@@ -35,4 +35,11 @@ class Clients {
     ): KeymgrExternReadServiceGrpc.KeymgrExternReadServiceBlockingStub {
         return KeymgrExternReadServiceGrpc.newBlockingStub(channel)
     }
+
+    @Bean
+    fun grpcList(
+        @GrpcChannel(GrpcServerChannel.NAME) channel: ManagedChannel
+    ): KeymgrReadAllServiceGrpc.KeymgrReadAllServiceBlockingStub {
+        return KeymgrReadAllServiceGrpc.newBlockingStub(channel)
+    }
 }

@@ -12,6 +12,9 @@ import javax.inject.Singleton
 @Singleton
 class ListEndpoint(private val service: ListService) : KeymgrReadAllServiceGrpc.KeymgrReadAllServiceImplBase() {
     override fun readAll(request: KeymgrReadAllRequest, responseObserver: StreamObserver<KeymgrReadAllResponse>) {
+        if(request.clientId.isNullOrBlank())
+            throw IllegalArgumentException("ClientId precisa ser preenchido")
+
         service.all(request.toValidatedEntity()).let {
             responseObserver.onNext(it)
             responseObserver.onCompleted()

@@ -76,13 +76,13 @@
       <recent name="br.com.zup.pix" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApplicationKt">
-    <configuration name="KeymgrEndpointTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'br.com.zup'">
+    <configuration name="ExtensionsTest.is enum readable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.zup.key.KeymgrEndpointTest&quot; --stacktrace" />
+        <option name="scriptParameters" value="--tests &quot;br.com.zup.utils.ExtensionsTest.is enum readable&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -98,12 +98,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="KeymgrEndpointTest.should registry a new key" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ExtensionsTest.should transform request in validated object" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;br.com.zup.key.KeymgrEndpointTest.should registry a new key&quot;" />
+        <option name="scriptParameters" value="--tests &quot;br.com.zup.utils.ExtensionsTest.should transform request in validated object&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -168,19 +168,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.KeymgrEndpointTest.should registry a new key" />
-      <item itemvalue="Gradle.KeymgrEndpointTest" />
       <item itemvalue="Gradle.Tests in 'br.com.zup'" />
       <item itemvalue="Application.ApplicationKt" />
       <item itemvalue="Application.UniquePixKeyKt" />
+      <item itemvalue="Gradle.ExtensionsTest.is enum readable" />
+      <item itemvalue="Gradle.ExtensionsTest.should transform request in validated object" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApplicationKt" />
         <item itemvalue="Gradle.Tests in 'br.com.zup'" />
+        <item itemvalue="Gradle.ExtensionsTest.should transform request in validated object" />
+        <item itemvalue="Gradle.ExtensionsTest.is enum readable" />
+        <item itemvalue="Application.ApplicationKt" />
         <item itemvalue="Application.UniquePixKeyKt" />
-        <item itemvalue="Gradle.KeymgrEndpointTest" />
-        <item itemvalue="Gradle.KeymgrEndpointTest.should registry a new key" />
       </list>
     </recent_temporary>
   </component>
@@ -197,6 +197,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/keymgr$ApplicationKt.ic" NAME="ApplicationKt Coverage Results" MODIFIED="1617996614399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/keymgr$Tests_in__br_com_zup_.ic" NAME="Tests in 'br.com.zup' Coverage Results" MODIFIED="1617999217014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/keymgr$ExtensionsTest_should_transform_request_in_validated_object.ic" NAME="ExtensionsTest.should transform request in validated object Coverage Results" MODIFIED="1618230303782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/keymgr$Tests_in__br_com_zup_.ic" NAME="Tests in 'br.com.zup' Coverage Results" MODIFIED="1618230328890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

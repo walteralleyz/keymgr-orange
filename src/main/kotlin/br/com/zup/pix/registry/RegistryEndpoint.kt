@@ -10,7 +10,6 @@ import javax.inject.Singleton
 @ErrorHandler
 @Singleton
 class RegistryEndpoint(private val service: RegistryService) : KeymgrRegistryServiceGrpc.KeymgrRegistryServiceImplBase() {
-
     override fun registry(req: KeymgrRegistryRequest, responseObserver: StreamObserver<KeymgrRegistryResponse>) {
         isValidPixKey(req.pix, req.pixType)?.let {
             errorResponse(responseObserver, it, Status.INVALID_ARGUMENT)
