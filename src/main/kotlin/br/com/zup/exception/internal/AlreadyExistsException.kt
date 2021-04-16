@@ -1,3 +1,7 @@
 package br.com.zup.exception.internal
 
-class AlreadyExistsException(message: String) : RuntimeException(message)
+import io.grpc.Status
+
+class AlreadyExistsException(message: String) : RuntimeException(message), ApplicationException {
+    override val status: Status = Status.ALREADY_EXISTS
+}

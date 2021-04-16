@@ -1,21 +1,19 @@
 package br.com.zup.exception
+
+import br.com.zup.exception.internal.ApplicationException
 import io.grpc.Metadata
 import io.grpc.Status
 import io.grpc.StatusRuntimeException
-import io.grpc.protobuf.StatusProto
+import javax.validation.ConstraintViolationException
 
-interface ExceptionHandler<in E : Exception> {
-
-    fun handle(e: E): StatusWithDetails
-
-    fun supports(e: Exception): Boolean
-
-    data class StatusWithDetails(val status: Status, val metadata: Metadata = Metadata()) {
-        constructor(se: StatusRuntimeException): this(se.status, se.trailers ?: Metadata())
-        constructor(sp: com.google.rpc.Status): this(StatusProto.toStatusRuntimeException(sp))
-
-        fun asRuntimeException(): StatusRuntimeException {
-            return status.asRuntimeException(metadata)
-        }
-    }
+fun handleException(e: Exception): Status {
+    return when (e) {
+        is IllegalArgumentException -> Status.INVALID_ARGUMENT.withDescription(e.message)
+        is IllegalStateException -> Status.FAILED_PRECONDITION.withDescription(e.message)
+        is ConstraintViolationException -> Status.INVALID_ARGUMENT.withDescription(e.message)
+        is ApplicationException -> e.status.withDescription(e.message)
+        else -> Status.UNKNOWN.withDescription(e.message)
+    }.withCause(e)
 }
+
+fun convertStatusToRuntime(status: Status): StatusRuntimeException = status.asRuntimeException(Metadata())
